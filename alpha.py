@@ -14,11 +14,11 @@ f = opener.open(req)
 Bjson = json.loads(f.read())
 
 
-KCurrencyList = ['AE', 'AION', 'BAT', 'BCH', 'BTC', 'EOS', 'ETH', 'GAS', 'GNT', 'LTC', 'NCASH', 'NEO', 'OMG', 'ONT',
-                  'REQ', 'TRX', 'XLM', 'XRB', 'XRP', 'ZRX']
+KCurrencyList = ["AE", "AION", "BAT", "BCH", "BTC", "EOS", "ETH", "GAS", "GNT", "LTC", "NCASH", "NEO", "OMG", "ONT",
+                  "REQ", "TRX", "XLM", "XRB", "XRP", "ZRX"]
 
-BCurrencyList = ['AE', 'AION', 'BAT', 'BCC', 'BTC', 'EOS', 'ETH', 'GAS', 'GNT', 'LTC', 'NCASH', 'NEO', 'OMG', 'ONT',
-                 'REQ', 'TRX', 'XLM', 'NANO', 'XRP', 'ZRX']
+BCurrencyList = ["AE", "AION", "BAT", "BCC", "BTC", "EOS", "ETH", "GAS", "GNT", "LTC", "NCASH", "NEO", "OMG", "ONT",
+                 "REQ", "TRX", "XLM", "NANO", "XRP", "ZRX"]
 
 n = len(KCurrencyList)
 
@@ -31,16 +31,16 @@ BRatios = [[0.0 for x in range(n)] for y in range(n)]
 BjsonRange = len(Bjson)
 
 for x in range(n):
-    KPrices[x] = float(Kjson['prices']['inr'][KCurrencyList[x]])
+    KPrices[x] = float(Kjson["prices"]["inr"][KCurrencyList[x]])
     for y in range(BjsonRange):
-        if Bjson[y]['symbol'] == BCurrencyList[x]+"BTC":
-            BPrices[x] = float(Bjson[y]['price'])
+        if Bjson[y]["symbol"] == BCurrencyList[x]+"BTC":
+            BPrices[x] = float(Bjson[y]["price"])
 
 BPrices[4] = 1.0
 print BPrices
 arr=[]
 for x in range(n):
-    for y in range(n):
+    for y in range(x+1,n):
         BRatios[x][y] = BPrices[y]/BPrices[x]
         KRatios[x][y] = KPrices[y]/KPrices[x]
         Ktemp = KRatios[x][y]
