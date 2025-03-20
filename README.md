@@ -1,14 +1,45 @@
-# cryptohack
+# CryptoHack Solutions
 
-  This project contains the source code of an apk and python file (alpha.py) using which one can get the data from Binance and Koinex crypto currency exchange platforms. And also get suggestions depending on the arbitrage made in these exchange platforms currencies.
-  
-  # Usage
-  To run on a system you can use python file (alpha.py) and get results directly. To have apk
-  i) Download and compile the project in androi studio
-  ii) Connect your android device and run the project
-  
-  Note: For devices with >= 7.0 the app may consume more battery and memory
-  
-# Pavan Konduri - Project owner and Contributor
-  Idea Contributors - Karni Singh and Biddu Bhushan Singh
-  
+This repository contains solutions to various cryptographic challenges from [CryptoHack](https://cryptohack.org/). CryptoHack is a platform designed to teach and test cryptography skills through hands-on challenges.
+
+## Table of Contents
+- [About](#about)
+- [Challenges](#challenges)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## About
+The solutions in this repository cover multiple cryptographic domains, including:
+- Classical Ciphers
+- Block Ciphers
+- Public Key Cryptography
+- Elliptic Curve Cryptography
+- Quantum Cryptography
+- Side-Channel Attacks
+
+Each solution is implemented in Python and includes explanations where necessary.
+
+## Challenges
+The challenges are categorized in separate directories, corresponding to the sections on CryptoHack. Each directory contains Python scripts that solve the respective challenge.
+
+## Setup
+To run the solutions, ensure you have Python installed on your system (preferably Python 3.8+). You may need additional libraries, which can be installed using:
+
+```sh
+pip install -r requirements.txt
+```
+
+## Usage
+To run a solution, navigate to the relevant category and execute the script:
+
+```sh
+python challenge_name.py
+```
+
+## Contributing
+Contributions are welcome! Feel free to submit pull requests for improvements, better explanations, or alternative solutions.
+
+## License
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
